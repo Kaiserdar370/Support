@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Support Us</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #e6e6fa, #f8f9fa);
+            color: #333;
+        }
+
+        /* Support Bar at the top */
+        .support-bar {
+            background-color: #6a0dad;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 40px;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #6a0dad;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+                .description {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* Updated button style */
+        .pay-btn {
+            background-color: #FFD700;
+            color: #333;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .pay-btn:hover {
+            background-color: #FFCC00;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .pay-btn:active {
+            transform: translateY(0);
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        footer a {
+            color: #6a0dad;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #520b85;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card {
+                max-width: 90%;
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .description {
+                font-size: 1rem;
+            }
+
+            .pay-btn {
+                padding: 12px 25px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Support Bar at the top -->
+    <div class="support-bar">
+        Your support keeps us going! Every contribution helps.
+    </div>
+
+    <!-- Card Section -->
+    <div class="container">
+        <div class="card">
+            <h1>Support Our Cause</h1>
+            <p class="description">
+                Your support helps us continue our work and make a difference. Click the button below to contribute via Paytm.
+            </p>
+            <button class="pay-btn" onclick="redirectToPaytm()">Pay with Paytm</button>
+            <footer>
+                <p>If you have any questions, feel free to reach us at <a href="mailto:support@example.com">support@example.com</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        function redirectToPaytm() {
+            window.location.href = 'paytmmp://pay?pa=akmart.shop@ybl&pn=RecipientName&am=Amount&tn=SupportPayment';
+            // Fallback to the Paytm web link
+            setTimeout(function() {
+                window.location.href = 'https://paytm.me/Tr3A-Nj';
+            }, 2000);
+        }
+    </script>
+
+</body>
+</html>
+
