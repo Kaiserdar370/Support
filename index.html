@@ -166,14 +166,11 @@
     </div>
 
     <script>
-        function redirectToPaytm() {
-            window.location.href = 'paytmmp://pay?pa=akmart.shop@ybl&pn=RecipientName&am=Amount&tn=SupportPayment';
-            // Fallback to the Paytm web link
-            setTimeout(function() {
-                window.location.href = 'https://paytm.me/Tr3A-Nj';
-            }, 2000);
-        }
+    function redirectToPaytm() {
+        window.open('https://paytm.me/Tr3A-Nj', '_blank');
+    }
     </script>
+    
 
 </body>
 </html>
